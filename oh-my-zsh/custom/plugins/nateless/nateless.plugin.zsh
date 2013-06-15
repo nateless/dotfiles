@@ -123,8 +123,8 @@ alias l="ls -laG"
 alias la="ls -laG"
 alias lsd='ls -laG | grep "^d"'
 alias e=edit
+alias c=colorize
 
 # git aliases
 alias ga="git add ."
-alias gc="git commit -m '$1'"
-alias gp="git push $1 master"
+alias gpo="git push origin master"
