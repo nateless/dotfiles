@@ -12,10 +12,15 @@ cd ~/.dotfiles
 rake install
 ```
 
-After installing, open a new terminal window to see the effects.
+Installing all packages with brew
+```terminal
+./.brew
+```
 
-Feel free to customize the .zshrc file to match your preference.
-
+Update some OSX settings
+```terminal
+./.osx
+```
 
 ## Features
 
