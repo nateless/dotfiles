@@ -20,3 +20,7 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 HISTSIZE=10000
 SAVEHIST=10000
+
+export RUBY_HEAP_MIN_SLOTS=2000000
+export RUBY_HEAP_FREE_MIN=20000
+export RUBY_GC_MALLOC_LIMIT=100000000
