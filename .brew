@@ -27,26 +27,5 @@ brew install git
 brew install imagemagick
 brew install node
 
-brew tap homebrew/versions
-brew install lua52
-
-# Install native apps
-brew tap phinze/homebrew-cask
-brew install brew-cask
-
-function installcask() {
-  brew cask install "${@}" 2> /dev/null
-}
-
-installcask dropbox
-installcask google-chrome
-installcask google-chrome-canary
-installcask imagealpha
-installcask imageoptim
-installcask iterm2
-installcask the-unarchiver
-installcask virtualbox
-installcask vlc
-
 # Remove outdated versions from the cellar
 brew cleanup
