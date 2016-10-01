@@ -3,4 +3,5 @@
 brew update
 brew upgrade
 
-brew install rbenv ruby-build git postgresql
+brew install rbenv ruby-build git postgresql autoconf automake curl elixir node openssl readline redis 
+ssh-copy-id
