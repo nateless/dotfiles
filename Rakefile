@@ -4,7 +4,6 @@ require 'erb'
 desc "install the dot files into user's home directory"
 task :install do
   install_oh_my_zsh
-  switch_to_zsh
   replace_all = false
   files = Dir['*'] - %w[Rakefile README.rdoc LICENSE oh-my-zsh]
   files << "oh-my-zsh/custom/plugins/nateless"
@@ -52,23 +51,6 @@ def link_file(file)
   else
     puts "linking ~/.#{file}"
     system %Q{ln -s "$PWD/#{file}" "$HOME/.#{file}"}
-  end
-end
-
-def switch_to_zsh
-  if ENV["SHELL"] =~ /zsh/
-    puts "using zsh"
-  else
-    print "switch to zsh? (recommended) [ynq] "
-    case $stdin.gets.chomp
-    when 'y'
-      puts "switching to zsh"
-      system %Q{chsh -s `which zsh`}
-    when 'q'
-      exit
-    else
-      puts "skipping zsh"
-    end
   end
 end
 
